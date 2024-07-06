@@ -58,6 +58,9 @@ jobs:
             # Run app
             sudo docker compose up --build --detach pacmusic-prod
 
+            # Check logs
+            sudo docker logs pacmusic-stg
+
       - name: Hit Endpoint
         run: |
           sleep 20
